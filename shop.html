@@ -171,6 +171,19 @@
   <!-- Page Header & Live Search Bar -->
   <section class="hero" style="padding: 3rem 0; text-align: center;">
     <div class="container">
+      
+      <!-- Creator Proof Card with PHOTO3.jpeg -->
+      <div style="max-width: 400px; margin: 0 auto 2.5rem auto; background: var(--white); padding: 2rem; border-radius: 12px; border: 2px solid var(--primary-color); box-shadow: 0 6px 20px rgba(0,0,0,0.08);">
+        <div style="margin-bottom: 1rem;">
+          <img src="PHOTO3.jpeg" alt="Derrick Entsee" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+        </div>
+        <h4 style="margin-bottom: 0.2rem; font-size: 1.1rem; color: var(--text-main);">Derrick Entsee</h4>
+        <p style="font-size: 0.75srem; color: var(--primary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">System Architect & Developer</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+          Verified catalog directory engine built specifically for fast, reliable pharmacy orders in Kumasi.
+        </p>
+      </div>
+
       <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Medicines & Healthcare Directory</h1>
       <p class="brand-tagline" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem;">Affordable orthodox medications, local herbal tonics, and pain-relief balms tailored for Ghana.</p>
       
@@ -183,199 +196,4 @@
         
         <div class="filter-pills" style="margin-top: 1.2rem;">
           <button class="filter-btn active" onclick="filterCategory('All')">All Products</button>
-          <button class="filter-btn" onclick="filterCategory('Creams & Balms')">🧴 Creams & Balms</button>
-          <button class="filter-btn" onclick="filterCategory('Ghanaian Herbal')">🌿 Local Herbal</button>
-          <button class="filter-btn" onclick="filterCategory('Orthodox & Foreign')">💊 Orthodox & Foreign</button>
-          <button class="filter-btn" onclick="filterCategory('Antibiotics')">Antibiotics</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products Catalog Section -->
-  <section class="section">
-    <div class="container">
-      <div id="medicineGrid" class="medicine-grid">
-        <!-- JavaScript will populate items dynamically here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Professional Footer -->
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="logo footer-logo">
-          <span class="logo-icon">+</span>
-          <span class="brand-name">Pharmacy Name</span>
-        </div>
-        <p class="brand-tagline">Precision Care, Genuine Medications & Fast Delivery</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Medicines & Care</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact & Prescriptions</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Visit or Call Us</h4>
-        <p>📍 <span class="brand-location">Location</span></p>
-        <p>📞 <span class="brand-phone">Phone</span></p>
-        <p>✉️ Primary: <a href="mailto:derryvegas810@gmail.com" style="color: inherit; text-decoration: none;"><span class="brand-email-primary">Email</span></a></p>
-        <p>✉️ Secondary: <a href="mailto:elderderry810@gmail.com" style="color: inherit; text-decoration: none;"><span class="brand-email-secondary">Email</span></a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span class="brand-year">2026</span> <span class="brand-name">Pharmacy Name</span>. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Script with Dual WhatsApp & Email Ordering -->
-  <script>
-    const medicines = [
-      // =========================================================================
-      // TOP PAIN RELIEF CREAMS, BALMS & THE "DEM-DEM" SKIN FAMILY
-      // =========================================================================
-      { name: "Aboniki Balm", rawPrice: 10.00, category: "Creams & Balms", desc: "Trusted soothing balm for waist pains, joint aches, elbow soreness, and muscular stiffness." },
-      { name: "Rob Ointment (Jar)", rawPrice: 8.00, category: "Creams & Balms", desc: "Classic soothing rub for chest colds, headaches, and body pain." },
-      { name: "Fixtain Pain Relief Ointment", rawPrice: 18.00, category: "Creams & Balms", desc: "Deep-penetrating ointment for severe back, waist, and joint discomfort." },
-      { name: "Tiger Balm", rawPrice: 20.00, category: "Creams & Balms", desc: "Powerful herbal pain-relief ointment for muscles and joints." },
-      { name: "Voltarol Emulgel 1%", rawPrice: 45.00, category: "Creams & Balms", desc: "Targeted anti-inflammatory gel for joint pain, arthritis, and sprains." },
-      { name: "Mentholatum Ointment", rawPrice: 12.00, category: "Creams & Balms", desc: "Soothing medicated chest and muscle rub." },
-      { name: "Zambuk Ointment", rawPrice: 10.00, category: "Creams & Balms", desc: "Traditional antiseptic ointment for minor cuts, scrapes, and bruises." },
-      
-      // The Dem-Dem Family & Skin Treatments
-      { name: "Epiderm Cream", rawPrice: 17.00, category: "Creams & Balms", desc: "Multi-action antiseptic and anti-fungal cream for stubborn skin infections and rashes." },
-      { name: "Pim-Pim Dem Cream", rawPrice: 15.00, category: "Creams & Balms", desc: "Popular topical treatment for clearing pimples, acne spots, and facial blemishes." },
-      { name: "Eczema Dem Cream", rawPrice: 18.00, category: "Creams & Balms", desc: "Soothing medicated cream formulated to relieve eczema and dry itchy skin." },
-      { name: "Ringworm Dem Cream", rawPrice: 15.00, category: "Creams & Balms", desc: "Targeted antifungal cream for ringworm, fungus, and stubborn body rashes." },
-      { name: "Psoriasis Dem Cream", rawPrice: 20.00, category: "Creams & Balms", desc: "Specialized soothing cream for scaly and irritated skin conditions." },
-      { name: "Boil Dem Ointment", rawPrice: 15.00, category: "Creams & Balms", desc: "Traditional drawing ointment for boils and skin abscesses." },
-      { name: "Rash Dem Cream", rawPrice: 15.00, category: "Creams & Balms", desc: "Relieves prickly heat, prickly rashes, and general skin irritation." },
-      { name: "Funbact-A Cream", rawPrice: 17.00, category: "Creams & Balms", desc: "Triple-action antibacterial, antifungal, and anti-inflammatory cream." },
-      { name: "Dermovate Cream", rawPrice: 30.00, category: "Creams & Balms", desc: "High-potency topical steroid for severe inflammatory skin disorders." },
-      { name: "Betnovate Cream", rawPrice: 25.00, category: "Creams & Balms", desc: "Effective steroid cream for eczema and dermatitis." },
-      { name: "Clotrimazole Skin Cream", rawPrice: 15.00, category: "Creams & Balms", desc: "Antifungal treatment for athlete's foot and jock itch." },
-
-      // =========================================================================
-      // GHANAIAN HERBAL & TRADITIONAL REMEDIES
-      // =========================================================================
-      { name: "Taabea Herbal Mixture", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Popular herbal tonic for general wellbeing and body pains." },
-      { name: "Taabea Appietu Mixture", rawPrice: 30.00, category: "Ghanaian Herbal", desc: "Traditional herbal mixture formulated for vitality." },
-      { name: "Taabea Capsules", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Convenient herbal supplement form of Taabea." },
-      { name: "Solka Herbal Mixture", rawPrice: 30.00, category: "Ghanaian Herbal", desc: "Trusted herbal remedy for immune support and cleansing." },
-      { name: "Poma Herbal Mixture", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Effective herbal preparation for general body revitalization." },
-      { name: "Agyenkwa Herbal Mixture", rawPrice: 30.00, category: "Ghanaian Herbal", desc: "Renowned local herbal tonic for stomach comfort and energy." },
-      { name: "Action Bitters", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Popular herbal bitters for vigor and metabolism support." },
-      { name: "Alomo Bitters", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Authentic Ghanaian herbal alcoholic bitters extract." },
-      { name: "DBS Bitters", rawPrice: 30.00, category: "Ghanaian Herbal", desc: "Herbal bitters blend for general body refreshment." },
-      { name: "Pataa Bitters", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Herbal tonic bitters for digestion and vitality." },
-      { name: "Prekese (Tetrapleura) Syrup", rawPrice: 35.00, category: "Ghanaian Herbal", desc: "Concentrated Aidan fruit extract for blood pressure and immunity." },
-      { name: "Cryptolepis (Nibima) Tea", rawPrice: 25.00, category: "Ghanaian Herbal", desc: "Traditional herbal infusion for wellness and fever support." },
-
-      // =========================================================================
-      // ORTHODOX, FOREIGN & GENERAL PHARMACEUTICALS
-      // =========================================================================
-      { name: "Paracetamol 500mg Tablets", rawPrice: 5.00, category: "Orthodox & Foreign", desc: "Fast relief from headaches, fevers, and body pains." },
-      { name: "Panadol Extra", rawPrice: 10.00, category: "Orthodox & Foreign", desc: "Enhanced formula with caffeine for stubborn headaches." },
-      { name: "Ibuprofen 400mg Tablets", rawPrice: 8.00, category: "Orthodox & Foreign", desc: "Anti-inflammatory for joint pain, toothaches, and cramps." },
-      { name: "Diclofenac Potassium 50mg", rawPrice: 12.00, category: "Orthodox & Foreign", desc: "Rapid pain relief for arthritis, sprains, and muscle aches." },
-      { name: "Naproxen 500mg Tablets", rawPrice: 20.00, category: "Orthodox & Foreign", desc: "Long-acting anti-inflammatory for severe joint and muscle pain." },
-      { name: "Coartem (Artemether/Lumefantrine)", rawPrice: 38.00, category: "Orthodox & Foreign", desc: "Standard effective treatment for uncomplicated malaria." },
-      { name: "Lonart DS Tablets", rawPrice: 40.00, category: "Orthodox & Foreign", desc: "Double strength artemether-lumefantrine malaria treatment." },
-      { name: "Amoxicillin 500mg Capsules", rawPrice: 25.00, category: "Antibiotics", desc: "Broad-spectrum antibiotic for bacterial infections." },
-      { name: "Augmentin 625mg (Amox/Clav)", rawPrice: 75.00, category: "Antibiotics", desc: "High-potency penicillin antibiotic for resistant infections." },
-      { name: "Ciprofloxacin 500mg Tablets", rawPrice: 30.00, category: "Antibiotics", desc: "Fluoroquinolone antibiotic for UTIs and bacterial infections." },
-      { name: "Azithromycin 500mg Tablets", rawPrice: 45.00, category: "Antibiotics", desc: "Powerful macrolide antibiotic for respiratory infections." },
-      { name: "Metronidazole 400mg Tablets", rawPrice: 12.00, category: "Antibiotics", desc: "Effective antibiotic for anaerobic bacterial infections." },
-      { name: "Amlodipine 5mg Tablets", rawPrice: 15.00, category: "Chronic Care", desc: "Manages high blood pressure and chest pain." },
-      { name: "Lisinopril 10mg Tablets", rawPrice: 18.00, category: "Chronic Care", desc: "ACE inhibitor prescribed for blood pressure and heart protection." },
-      { name: "Losartan 50mg Tablets", rawPrice: 30.00, category: "Chronic Care", desc: "ARB medication for hypertension and kidney protection." },
-      { name: "Metformin 500mg Tablets", rawPrice: 15.00, category: "Chronic Care", desc: "First-line medication for managing type 2 diabetes blood sugar." },
-      { name: "Omeprazole 20mg Capsules", rawPrice: 18.00, category: "Orthodox & Foreign", desc: "Reduces stomach acid for ulcers, reflux, and heartburn." },
-      { name: "Gaviscon Liquid 300ml", rawPrice: 65.00, category: "Orthodox & Foreign", desc: "Fast-acting relief from heartburn and indigestion." },
-      { name: "Vitamin C 1000mg Tablets", rawPrice: 25.00, category: "Orthodox & Foreign", desc: "Boosts immune system defense and antioxidant support." },
-      { name: "Centrum Multivitamin", rawPrice: 120.00, category: "Orthodox & Foreign", desc: "Complete daily multivitamin and mineral formula." },
-      { name: "Salbutamol Inhaler", rawPrice: 50.00, category: "Orthodox & Foreign", desc: "Quick-relief rescue inhaler for asthma." },
-      { name: "Digital Blood Pressure Monitor", rawPrice: 180.00, category: "Orthodox & Foreign", desc: "Accurate automatic upper-arm BP check device." }
-    ];
-
-    function displayMedicines(items) {
-      const grid = document.getElementById('medicineGrid');
-      grid.innerHTML = '';
-
-      if (items.length === 0) {
-        grid.innerHTML = `<div class="no-results"><h3>No item found</h3><p>Try searching for another name or use our <a href="contact.html" style="color: var(--primary-color);">prescription upload page</a>.</p></div>`;
-        return;
-      }
-
-      items.forEach(med => {
-        const card = document.createElement('div');
-        card.className = 'medicine-card';
-        
-        // Calculate 10% delivery fee
-        const deliveryFee = med.rawPrice * 0.10;
-        const totalWithDelivery = med.rawPrice + deliveryFee;
-
-        const priceDisplay = `GH₵ ${med.rawPrice.toFixed(2)}`;
-        const deliveryText = `+ GH₵ ${deliveryFee.toFixed(2)} delivery (Total: GH₵ ${totalWithDelivery.toFixed(2)})`;
-        
-        // WhatsApp URL
-        const whatsappText = encodeURIComponent(`Hello Deevee Pharmacy, I would like to order: *${med.name}* (Item Price: GH₵ ${med.rawPrice.toFixed(2)} + 10% Delivery: GH₵ ${deliveryFee.toFixed(2)} = Total: GH₵ ${totalWithDelivery.toFixed(2)}). Please confirm availability and dispatch.`);
-        const waUrl = `https://wa.me/233597861853?text=${whatsappText}`;
-
-        // Email URL (`mailto:`)
-        const emailSubject = encodeURIComponent(`Order Inquiry: ${med.name} - Deevee Pharmacy`);
-        const emailBody = encodeURIComponent(`Hello Deevee Pharmacy Administrator,\n\nI would like to order the following item from your website:\n\n- Medicine/Item: ${med.name}\n- Base Price: GH₵ ${med.rawPrice.toFixed(2)}\n- Delivery Fee (10%): GH₵ ${deliveryFee.toFixed(2)}\n- Total Amount: GH₵ ${totalWithDelivery.toFixed(2)}\n\nPlease contact me to confirm my delivery details.\n\nThank you.`);
-        const emailUrl = `mailto:derryvegas810@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-        
-        card.innerHTML = `
-          <div>
-            <div class="med-category">${med.category}</div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">${med.name}</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4;">${med.desc}</p>
-          </div>
-          <div>
-            <div class="med-price">${priceDisplay}</div>
-            <div class="delivery-subtext">${deliveryText}</div>
-            <div class="card-buttons">
-              <a href="${waUrl}" target="_blank" class="order-btn-wa">💬 WhatsApp</a>
-              <a href="${emailUrl}" class="order-btn-email">✉️ Email</a>
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function filterMedicines() {
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      const filtered = medicines.filter(m => 
-        m.name.toLowerCase().includes(query) || 
-        m.category.toLowerCase().includes(query) || 
-        m.desc.toLowerCase().includes(query)
-      );
-      displayMedicines(filtered);
-    }
-
-    function filterCategory(category) {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      if (category === 'All') {
-        displayMedicines(medicines);
-      } else {
-        const filtered = medicines.filter(m => m.category === category);
-        displayMedicines(filtered);
-      }
-    }
-
-    // Initial load
-    displayMedicines(medicines);
-  </script>
-  <script src="js/config.js"></script>
-</body>
-</html>
+          <button class="filter-btn" onclick="filterCategory('Creams & Balms')">🧴 Creams & Balms</
