@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Prescriptions — {{BRAND}}</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span>📍 <span class="brand-location">Location</span></span>
+      <span>🕒 <span class="brand-hours">Hours</span></span>
+      <span>📞 Orders: <strong class="brand-phone">Phone</strong></span>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">+</span>
+        <span class="brand-name">Pharmacy Name</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Medicines & Care</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active nav-cta">Upload Prescription</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero" style="padding: 3rem 0; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Contact & Prescriptions</h1>
+      <p class="brand-tagline" style="font-size: 1.1rem; color: var(--text-muted);">Send us your prescription or inquiry instantly via WhatsApp or email.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section">
+    <div class="container" style="max-width: 700px;">
+      <div class="feature-card" style="padding: 2.5rem;">
+        <h3 style="margin-bottom: 1.5rem;">Send Prescription or Message</h3>
+        
+        <!-- Form set up with both options -->
+        <form id="orderForm" onsubmit="handleEmailSubmit(event)">
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem;">Full Name</label>
+            <input type="text" id="clientName" placeholder="e.g. Kwaku Mensah" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: inherit;">
+          </div>
+
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem;">Phone Number</label>
+            <input type="tel" id="clientPhone" placeholder="e.g. +233 59 000 0000" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: inherit;">
+          </div>
+
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem;">Upload Prescription (Photo / PDF)</label>
+            <input type="file" id="clientFile" accept="image/*,.pdf" style="width: 100%; padding: 0.5rem; border: 1px dashed var(--primary-color); border-radius: 8px; background: var(--bg-tint); font-family: inherit;">
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem;">Additional Notes or Order Details</label>
+            <textarea id="clientMessage" rows="4" placeholder="List medications needed or delivery instructions..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: inherit;"></textarea>
+          </div>
+
+          <!-- Dual Action Buttons -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <button type="submit" class="btn btn-primary" style="padding: 0.8rem; font-size: 0.95rem; text-align: center;">✉️ Send via Email</button>
+            <button type="button" onclick="sendViaWhatsApp()" class="btn" style="background-color: #25D366; color: white; padding: 0.8rem; font-size: 0.95rem; text-align: center; border: none; border-radius: var(--radius); font-weight: 700; cursor: pointer;">💬 Order on WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo footer-logo">
+          <span class="logo-icon">+</span>
+          <span class="brand-name">Pharmacy Name</span>
+        </div>
+        <p class="brand-tagline">Precision Care, Genuine Medications & Fast Delivery</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Medicines & Care</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact & Prescriptions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit or Call Us</h4>
+        <p>📍 <span class="brand-location">Location</span></p>
+        <p>📞 <span class="brand-phone">Phone</span></p>
+        <p>✉️ Primary: <a href="mailto:derryvegas810@gmail.com" style="color: inherit; text-decoration: none;"><span class="brand-email-primary">Email</span></a></p>
+        <p>✉️ Secondary: <a href="mailto:elderderry810@gmail.com" style="color: inherit; text-decoration: none;"><span class="brand-email-secondary">Email</span></a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span class="brand-year">2026</span> <span class="brand-name">Pharmacy Name</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript to handle WhatsApp formatting and email alerts -->
+  <script>
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your prescription and details have been sent to our administrator email (derryvegas810@gmail.com). We will review and reply shortly.');
+      document.getElementById('orderForm').reset();
+    }
+
+    function sendViaWhatsApp() {
+      const name = document.getElementById('clientName').value;
+      const phone = document.getElementById('clientPhone').value;
+      const notes = document.getElementById('clientMessage').value;
+
+      if (!name || !phone) {
+        alert('Please fill in your Name and Phone Number before sending via WhatsApp.');
+        return;
+      }
+
+      const pharmacyNumber = '233597861853'; 
+      const text = `Hello Deevee Pharmacy, my name is *${name}* (Phone: ${phone}). Here is my order/prescription request: ${notes}`;
+      const encodedText = encodeURIComponent(text);
+      
+      window.open(`https://wa.me/${pharmacyNumber}?text=${encodedText}`, '_blank');
+    }
+  </script>
+
+  <script src="js/config.js"></script>
+</body>
+</html>
